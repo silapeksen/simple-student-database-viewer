@@ -80,7 +80,7 @@ public class MainPage extends JFrame {
 						return;//If it is null 
 					}
 					
-					Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "S44l44pn_");
+					Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "password");
 					Statement statement = connection.createStatement();
 					ResultSet resultSet = statement.executeQuery("SELECT * FROM students WHERE id = " + input);
 					
@@ -121,7 +121,7 @@ public class MainPage extends JFrame {
 				model.setRowCount(0);
 				
 				try {
-					Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "S44l44pn_");
+					Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "password");
 					Statement statement = connection.createStatement();
 					ResultSet resultSet = statement.executeQuery("SELECT * FROM students;");
 					
