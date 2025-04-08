@@ -1,1 +1,3 @@
-![Demo GIF](image/demo.gif)
+## Yeni GIF Eklendi
+
+![Demo](image/demo.gif)
