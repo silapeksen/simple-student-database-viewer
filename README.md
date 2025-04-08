@@ -1,3 +1,3 @@
 ## Yeni GIF Eklendi
 
-![Demo](image/demo.gif)
+![Demo](image/StudentList.gif)
