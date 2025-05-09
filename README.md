@@ -1,5 +1,5 @@
 # Simple Student Management System
-![Student Management System](Screenshot%202025-05-09%20152238.png)
+![Student Management System](screenshot.png)
 
 This is a basic Java Swing-based desktop application for managing student information in MySQL database with connection between them. Users can add, search, update, and delete student records. All data is displayed in a table interface, and includes fields such as name, faculty, department, and GPA.
 
