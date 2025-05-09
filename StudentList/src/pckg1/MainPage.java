@@ -123,7 +123,7 @@ public class MainPage extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				try {
-					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "S44l44pn_");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "password");
 					
 					Student stu = new Student(Integer.parseInt(txtStudentId.getText()), txtFirstName.getText(), txtLastName.getText(), txtFaculty.getText(), txtDepartment.getText(), new BigDecimal(txtGPA.getText()));
 					String insertQuery = "INSERT INTO students VALUES(?,?,?,?,?,?)";
@@ -169,7 +169,7 @@ public class MainPage extends JFrame {
 						return;// If it is null 
 					}
 					
-					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "S44l44pn_");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "password");
 					Statement st = con.createStatement();
 					ResultSet rs = st.executeQuery("SELECT * FROM students WHERE id = " + input);
 					
@@ -207,7 +207,7 @@ public class MainPage extends JFrame {
 				model.setRowCount(0);
 				
 				try {
-					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "S44l44pn_");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "password");
 					Statement st = con.createStatement();
 					ResultSet rs = st.executeQuery("SELECT * FROM students;");
 					
@@ -239,7 +239,7 @@ public class MainPage extends JFrame {
 				int id = Integer.parseInt(txtStudentId.getText());
 				
 				try {
-					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "S44l44pn_");					
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "password");					
 					
 					if (txtFirstName.getText().isEmpty() != true) {
 						String updateQuery = "UPDATE students SET first_name =? WHERE id =?";
@@ -300,7 +300,7 @@ public class MainPage extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				try {
-					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "S44l44pn_");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentlist", "root", "password");
 					
 					String deleteQuery = "DELETE FROM students WHERE id =?";
 					PreparedStatement ps = con.prepareStatement(deleteQuery);
